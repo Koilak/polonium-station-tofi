@@ -2,7 +2,7 @@ ammonia-smell = Czymś śmierdzi!
 
 ## Perishable
 
-perishable-1 = [color=green]{ CAPITALIZE(POSS-ADJ($target)) } zwłoki nadał są świeże.[/color]
+perishable-1 = [color=green]{ CAPITALIZE(POSS-ADJ($target)) } zwłoki nadal są świeże.[/color]
 perishable-2 = [color=orangered]{ CAPITALIZE(POSS-ADJ($target)) } zwłoki są w miarę świeże.[/color]
 perishable-3 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } zwłoki nie są zbytnio świeże.[/color]
 
