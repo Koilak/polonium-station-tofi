@@ -1,4 +1,5 @@
 using Content.Server.Body.Systems;
+using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Damage;
@@ -7,9 +8,19 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.Body.Components
 {
-    [RegisterComponent, Access(typeof(RespiratorSystem)), AutoGenerateComponentPause]
+    [RegisterComponent, Access(typeof(RespiratorSystem))]
     public sealed partial class RespiratorComponent : Component
     {
+        /// <summary>
+        ///     Gas container for this entity
+        /// </summary>
+        [DataField]
+        public GasMixture Air = new()
+        {
+            Volume = 6, // 6 liters, the average lung capacity for a human according to Google
+            Temperature = Atmospherics.NormalBodyTemperature
+        };
+
         /// <summary>
         ///     Volume of our breath in liters
         /// </summary>
@@ -25,7 +36,7 @@ namespace Content.Server.Body.Components
         /// <summary>
         ///     The next time that this body will inhale or exhale.
         /// </summary>
-        [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+        [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
         public TimeSpan NextUpdate;
 
         /// <summary>
@@ -34,18 +45,6 @@ namespace Content.Server.Body.Components
         /// </summary>
         [DataField]
         public TimeSpan UpdateInterval = TimeSpan.FromSeconds(2);
-
-        /// <summary>
-        /// Multiplier applied to <see cref="UpdateInterval"/> for adjusting based on metabolic rate multiplier.
-        /// </summary>
-        [DataField]
-        public float UpdateIntervalMultiplier = 1f;
-
-        /// <summary>
-        /// Adjusted update interval based off of the multiplier value.
-        /// </summary>
-        [ViewVariables]
-        public TimeSpan AdjustedUpdateInterval => UpdateInterval * UpdateIntervalMultiplier;
 
         /// <summary>
         ///     Saturation level. Reduced by UpdateInterval each tick.

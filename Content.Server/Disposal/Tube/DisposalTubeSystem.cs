@@ -428,7 +428,7 @@ namespace Content.Server.Disposal.Tube
 
             foreach (var entity in from.Container.ContainedEntities.ToArray())
             {
-                _containerSystem.Insert(entity, holderComponent.Container);
+                _disposableSystem.TryInsert(holder, entity, holderComponent);
             }
 
             _atmosSystem.Merge(holderComponent.Air, from.Air);

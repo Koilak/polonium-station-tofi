@@ -43,8 +43,6 @@ namespace Content.Server.Disposal.Unit
             _xformQuery = GetEntityQuery<TransformComponent>();
 
             SubscribeLocalEvent<DisposalHolderComponent, ComponentStartup>(OnComponentStartup);
-            SubscribeLocalEvent<DisposalHolderComponent, ContainerIsInsertingAttemptEvent>(CanInsert);
-            SubscribeLocalEvent<DisposalHolderComponent, EntInsertedIntoContainerMessage>(OnInsert);
         }
 
         private void OnComponentStartup(EntityUid uid, DisposalHolderComponent holder, ComponentStartup args)
@@ -52,16 +50,34 @@ namespace Content.Server.Disposal.Unit
             holder.Container = _containerSystem.EnsureContainer<Container>(uid, nameof(DisposalHolderComponent));
         }
 
-        private void CanInsert(Entity<DisposalHolderComponent> ent, ref ContainerIsInsertingAttemptEvent args)
+        public bool TryInsert(EntityUid uid, EntityUid toInsert, DisposalHolderComponent? holder = null)
         {
-            if (!HasComp<ItemComponent>(args.EntityUid) && !HasComp<BodyComponent>(args.EntityUid))
-                args.Cancel();
+            if (!Resolve(uid, ref holder))
+                return false;
+            if (!CanInsert(uid, toInsert, holder))
+                return false;
+
+            if (!_containerSystem.Insert(toInsert, holder.Container))
+                return false;
+
+            if (_physicsQuery.TryGetComponent(toInsert, out var physBody))
+                _physicsSystem.SetCanCollide(toInsert, false, body: physBody);
+
+            return true;
         }
 
-        private void OnInsert(Entity<DisposalHolderComponent> ent, ref EntInsertedIntoContainerMessage args)
+        private bool CanInsert(EntityUid uid, EntityUid toInsert, DisposalHolderComponent? holder = null)
         {
-            if (_physicsQuery.TryGetComponent(args.Entity, out var physBody))
-                _physicsSystem.SetCanCollide(args.Entity, false, body: physBody);
+            if (!Resolve(uid, ref holder))
+                return false;
+
+            if (!_containerSystem.CanInsert(toInsert, holder.Container))
+            {
+                return false;
+            }
+
+            return HasComp<ItemComponent>(toInsert) ||
+                   HasComp<BodyComponent>(toInsert);
         }
 
         public void ExitDisposals(EntityUid uid, DisposalHolderComponent? holder = null, TransformComponent? holderTransform = null)

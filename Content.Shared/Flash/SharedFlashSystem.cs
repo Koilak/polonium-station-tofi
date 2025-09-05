@@ -20,8 +20,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Linq;
-using Content.Shared.Movement.Systems;
-using Content.Shared.Random.Helpers;
 
 namespace Content.Shared.Flash;
 
@@ -35,7 +33,6 @@ public abstract class SharedFlashSystem : EntitySystem
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -166,9 +163,9 @@ public abstract class SharedFlashSystem : EntitySystem
             return;
 
         if (stunDuration != null)
-            _stun.TryUpdateParalyzeDuration(target, stunDuration.Value);
+            _stun.TryParalyze(target, stunDuration.Value, true);
         else
-            _movementMod.TryUpdateMovementSpeedModDuration(target, MovementModStatusSystem.FlashSlowdown, flashDuration, slowTo);
+            _stun.TrySlowdown(target, flashDuration, true, slowTo, slowTo);
 
         if (displayPopup && user != null && target != user && Exists(user.Value))
         {
@@ -205,8 +202,7 @@ public abstract class SharedFlashSystem : EntitySystem
         foreach (var entity in _entSet)
         {
             // TODO: Use RandomPredicted https://github.com/space-wizards/RobustToolbox/pull/5849
-            var seed = SharedRandomExtensions.HashCodeCombine(new() { (int)_timing.CurTick.Value, GetNetEntity(entity).Id });
-            var rand = new System.Random(seed);
+            var rand = new System.Random((int)_timing.CurTick.Value + GetNetEntity(entity).Id);
             if (!rand.Prob(probability))
                 continue;
 
