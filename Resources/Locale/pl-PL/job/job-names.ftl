@@ -116,4 +116,4 @@ JobStationEngineer = Station Engineer
 JobTechnicalAssistant = Pomocnik Techniczny
 JobVisitor = Wizytor
 JobWarden = Strażnik
-JobZookeeper = Zookeeper
+JobZookeeper = Opiekun Zoo
