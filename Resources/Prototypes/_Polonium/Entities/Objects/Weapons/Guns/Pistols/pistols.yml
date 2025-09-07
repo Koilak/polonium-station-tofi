@@ -34,3 +34,11 @@
         whitelist:
           tags:
             - CartridgePistol
+
+- type: entity
+  name: Pistolet test
+  parent: [BaseWeaponPistol, BaseSecurityContraband]
+  id: TestPistol
+  description: Testowy pistolet.
+  components:
+  -   type: Sprite
