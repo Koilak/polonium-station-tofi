@@ -1,11 +1,11 @@
 - type: entity
-  id: VisMPSPistolMagazine
-  name: Magazynek VIS MPS (.35 auto)
+  id: VisMPSPistolMagazineBase
+  name: Magazynek VIS MPS (.35 auto any)
   parent: [ BaseItem, BaseSecurityContraband]
   components:
     - type: Tag
       tags:
-        - MagazinePistolVPS
+        - VisMPSPistolMagazine
     - type: BallisticAmmoProvider
       mayTransfer: true
       whitelist:
@@ -18,7 +18,7 @@
       containers:
         ballistic-ammo: !type:Container
     - type: Sprite
-      sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
+      sprite: _Polonium/Weapons/Guns/Magazines/VIS_MPS_Mag.rsi
       layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -29,3 +29,40 @@
       steps: 6
       zeroVisible: false
     - type: Appearance
+
+
+- type: entity
+  id: VisMPSPistolMagazine
+  parent: VisMPSPistolMagazineBase
+  name: Magazynek VIS MPS (.35 auto)
+  description: Magazynek VIS MPS (.35 auto)
+  components:
+    - type: BallisticAmmoProvider
+      proto: CartridgePistol
+
+- type : entity
+  id: VisMPSPistolMagazineIncendiary
+  parent: VisMPSPistolMagazineBase
+  name: Magazynek VIS MPS (.35 auto incendiary)
+  description: Magazynek VIS MPS (.35 auto incendiary)
+  components:
+    - type: BallisticAmmoProvider
+      proto: CartridgePistolIncendiary
+
+- type : entity
+  id: VisMPSPistolMagazinUranium
+  parent: VisMPSPistolMagazineBase
+  name: Magazynek VIS MPS (.35 auto uranium)
+  description: Magazynek VIS MPS (.35 auto uranium)
+  components:
+    - type: BallisticAmmoProvider
+      proto: CartridgePistolUranium
+
+- type : entity
+  id: VisMPSPistolMagazinePractice
+  parent: VisMPSPistolMagazineBase
+  name: Magazynek VIS MPS (.35 auto practice)
+  description: Magazynek VIS MPS (.35 auto practice)
+  components:
+    - type: BallisticAmmoProvider
+      proto: CartridgePistolPractice
