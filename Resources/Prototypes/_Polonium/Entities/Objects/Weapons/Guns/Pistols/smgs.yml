@@ -1,23 +1,26 @@
 - type: entity
   name: PMM
   id: PMMMachineGun
-  parent: [BaseWeaponPistol, BaseSecurityContraband]
-  description: Standardowy pistolet użytkany przez polskie wojsko.
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
+  description: Najbardziej poważany pistolet maszynowy w Działach ochrony w polskich stacjach kosmicznych
   components:
     - type: Sprite
-      sprite: _Polonium/Weapons/Guns/PMM.rsi
+      sprite: _Polonium/Weapons/Guns/SMGs/PMM.rsi
       layers:
         - state: base
           map: ["enum.GunVisualLayers.Base"]
         - state: mag-0
           map: ["enum.GunVisualLayers.Mag"]
+    - type: Wieldable
+    - type: GunWieldBonus
+      minAngle: -19
+      maxAngle: -16
     - type: Gun
-      fireRate: 6
+      fireRate: 7
+      shotsPerBurst: 5
+      minAngle: 24
+      maxAngle: 36
       availableModes:
+        - FullAuto
+        - Burst
         - SemiAuto
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistol
-        priority: 1

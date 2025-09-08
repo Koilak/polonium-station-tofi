@@ -23,7 +23,7 @@
       priority: 1
       whitelist:
         tags:
-          - CartridgePisto
+          - CartridgePistol
   - type: ItemSlots
     slots:
       gun_magazine:
