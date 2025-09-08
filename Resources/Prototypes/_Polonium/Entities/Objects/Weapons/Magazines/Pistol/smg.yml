@@ -1,6 +1,6 @@
 - type: entity
   id: PMMMachineGunMagazineBase
-  name: Magazynek PMM (.35 auto any)
+  name: Magazynek PMM Model-X (.35 auto any)
   parent: [ BaseItem, BaseSecurityContraband]
   components:
     - type: Tag
@@ -33,7 +33,7 @@
 - type: entity
   id: PMMMachineGunMagazine
   parent: PMMMachineGunMagazineBase
-  name: Magazynek PMM (.35 auto )
+  name: Magazynek PMM Model-X (.35 auto )
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistol
@@ -41,8 +41,7 @@
 - type: entity
   id: PMMMachineGunMagazineUranium
   parent: PMMMachineGunMagazineBase
-  name: Magazynek PMM (.35 auto uranium)
-  description: Magazynek PMM (.35 auto uranium)
+  name: Magazynek PMM Model-X (.35 auto uranium)
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolUranium
@@ -50,8 +49,7 @@
 - type: entity
   id: PMMMachineGunMagazineIncendiary
   parent: PMMMachineGunMagazineBase
-  name: Magazynek PMM (.35 auto incendiary)
-  description: Magazynek PMM (.35 auto incendiary)
+  name: Magazynek PMM Model-X (.35 auto incendiary)
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolIncendiary
@@ -60,8 +58,7 @@
 - type: entity
   id: PMMMachineGunMagazinePractice
   parent: PMMMachineGunMagazineBase
-  name: Magazynek PMM (.35 auto practice)
-  description: Magazynek PMM (.35 auto practice)
+  name: Magazynek PMM Model-X (.35 auto practice)
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolPractice

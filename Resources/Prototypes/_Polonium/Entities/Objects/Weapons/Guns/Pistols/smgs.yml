@@ -1,5 +1,5 @@
 - type: entity
-  name: PMM
+  name: PMM Model-X
   id: PMMMachineGun
   parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
   description: Najbardziej poważany pistolet maszynowy w Działach ochrony w polskich stacjach kosmicznych
@@ -20,9 +20,9 @@
       minAngle: -18
       maxAngle: -24
     - type: Gun
-      fireRate: 12
-      burstFireRate: 15
-      shotsPerBurst: 5
+      fireRate: 7
+      burstFireRate: 9
+      shotsPerBurst: 3
       minAngle: 24
       maxAngle: 36
       availableModes:
@@ -58,4 +58,4 @@
         gun_magazine: !type:ContainerSlot
         gun_chamber: !type:ContainerSlot
     - type: StaticPrice
-      price: 500
+      price: 1250
