@@ -1,46 +1,184 @@
 {
     "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "directional sprites taken from https://github.com/space-wizards/space-station-14/commit/c1556214de46d66fe4057500e269b17438dc96ca | direction_mail modified by Hyenh, direction_logi modified by Floofers | direction_court, direction_justice by leonardo_dabepis (Discord) | chapel modified from upstream sprite by Lyndomen (github) | Logistics and Epistemics modified by JustAnOrange | armory, direction_brig, direction_sec, interrogation, law, prison, and security sprites modified by TJohnson.",
     "size": {
         "x": 32,
         "y": 32
     },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/discordia-space/CEV-Eris at commit 4e0bbe682d0a00192d24708fdb7031008aa03f18 and bee station at commit https://github.com/BeeStation/BeeStation-Hornet/commit/13dd5ac712385642574138f6d7b30eea7c2fab9c, Job signs by EmoGarbage404 (github) with inspiration from yogstation and tgstation, 'direction_exam' and 'direction_icu' made by rosieposieeee (github), 'direction_atmos' made by SlamBamActionman, 'vox' based on sprites taken from vgstation13 at https://github.com/vgstation-coders/vgstation13/blob/e7f005f8b8d3f7d89cbee3b87f76c23f9e951c27/icons/obj/decals.dmi, 'direction_pods' derived by WarPigeon from existing directional signs., 'detective' derived by Soupkilove from existing security sign",
     "states": [
         {
-            "name": "direction_logi",
-            "directions": 4
+            "name": "ai"
         },
         {
-            "name": "direction_mail",
-            "directions": 4
+            "name": "ai_upload"
         },
         {
-            "name": "direction_court",
-            "directions": 4
+            "name": "vault"
         },
         {
-            "name": "direction_justice",
-            "directions": 4
+            "name": "xenoarch"
         },
         {
-            "name": "direction_aicore",
-            "directions": 4
+            "name": "anomaly"
         },
         {
-            "name": "chapel"
-        },
-        {
-            "name": "epistemics"
-        },
-        {
-            "name": "logistics"
+            "name": "arcade"
         },
         {
             "name": "armory"
         },
         {
-            "name": "direction_brig",
+            "name": "barbershop"
+        },
+        {
+            "name": "ass"
+        },
+        {
+            "name": "atmos"
+        },
+        {
+            "name": "atmos_air"
+        },
+        {
+            "name": "atmos_co2"
+        },
+        {
+            "name": "atmos_n2"
+        },
+        {
+            "name": "atmos_n2o"
+        },
+        {
+            "name": "atmos_o2"
+        },
+        {
+            "name": "atmos_plasma"
+        },
+        {
+            "name": "atmos_tritium"
+        },
+        {
+            "name": "atmos_waste"
+        },
+        {
+            "name": "atmosplaque"
+        },
+        {
+            "name": "zumosplaque"
+        },
+        {
+            "name": "bar"
+        },
+        {
+            "name": "bath"
+        },
+        {
+            "name": "biblio"
+        },
+        {
+            "name": "bio"
+        },
+        {
+            "name": "biohazard"
+        },
+        {
+            "name": "bridge"
+        },
+        {
+            "name": "canisters"
+        },
+        {
+            "name": "cargo"
+        },
+        {
+            "name": "cargo_dock"
+        },
+        {
+            "name": "chapel"
+        },
+        {
+            "name": "chem"
+        },
+        {
+            "name": "commander"
+        },
+        {
+            "name": "conference_room"
+        },
+        {
+            "name": "corrosives"
+        },
+        {
+            "name": "cryogenics"
+        },
+        {
+            "name": "danger"
+        },
+        {
+            "name": "deathsposal"
+        },
+        {
+            "name": "detective"
+        },
+        {
+            "name": "direction_atmos",
+            "directions": 4
+        },
+        {
+            "name": "direction_bar",
+            "directions": 4
+        },
+        {
+            "name": "direction_exam",
+            "directions": 4
+        },
+        {
+            "name": "direction_icu",
+            "directions": 4
+        },
+        {
+            "name": "direction_janitor",
+            "directions": 4
+        },
+        {
+            "name": "direction_food",
+            "directions": 4
+        },
+        {
+            "name": "direction_hop",
+            "directions": 4
+        },
+        {
+            "name": "direction_library",
+            "directions": 4
+        },
+        {
+            "name": "direction_chemistry",
+            "directions": 4
+        },
+        {
+            "name": "direction_eng",
+            "directions": 4
+        },
+        {
+            "name": "direction_evac",
+            "directions": 4
+        },
+        {
+            "name": "direction_supply",
+            "directions": 4
+        },
+        {
+            "name": "direction_bridge",
+            "directions": 4
+        },
+        {
+            "name": "direction_med",
+            "directions": 4
+        },
+        {
+            "name": "direction_sci",
             "directions": 4
         },
         {
@@ -48,19 +186,332 @@
             "directions": 4
         },
         {
+            "name": "direction_brig",
+            "directions": 4
+        },
+        {
+            "name": "direction_chapel",
+            "directions": 4
+        },
+        {
+            "name": "direction_hydro",
+            "directions": 4
+        },
+        {
+            "name": "direction_dorms",
+            "directions": 4
+        },
+        {
+            "name": "direction_cryo",
+            "directions": 4
+        },
+        {
+            "name": "direction_gravity",
+            "directions": 4
+        },
+        {
+            "name": "direction_salvage",
+            "directions": 4
+        },
+        {
+            "name": "direction_solar",
+            "directions": 4
+        },
+        {
+            "name": "direction_wash",
+            "directions": 4
+        },
+        {
+            "name": "direction_pods",
+            "directions": 4
+        },
+        {
+            "name": "dock"
+        },
+        {
+            "name": "doors"
+        },
+        {
+            "name": "mats"
+        },
+        {
+            "name": "electrical"
+        },
+        {
+            "name": "eng"
+        },
+        {
+            "name": "engine"
+        },
+        {
+            "name": "eva"
+        },
+        {
+            "name": "examroom"
+        },
+        {
+            "name": "explosives"
+        },
+        {
+            "name": "fire"
+        },
+        {
+            "name": "flammable"
+        },
+        {
+            "name": "cloning"
+        },
+        {
+            "name": "genpop"
+        },
+        {
+            "name": "gravi"
+        },
+        {
+            "name": "hydro"
+        },
+        {
             "name": "interrogation"
+        },
+        {
+            "name": "janitor"
+        },
+        {
+            "name": "laser"
+        },
+        {
+            "name": "laundromat"
         },
         {
             "name": "law"
         },
         {
+            "name": "magnetics"
+        },
+        {
+            "name": "mail"
+        },
+        {
+            "name": "medbay"
+        },
+        {
+            "name": "memetic"
+        },
+        {
+            "name": "monkey_painting"
+        },
+        {
+            "name": "morgue"
+        },
+        {
+            "name": "news"
+        },
+        {
+            "name": "kitchen"
+        },
+        {
+            "name": "drama1"
+        },
+        {
+            "name": "drama2"
+        },
+        {
+            "name": "drama3"
+        },
+        {
+            "name": "restroom"
+        },
+        {
+            "name": "nosmoking"
+        },
+        {
+            "name": "nosmoking2"
+        },
+        {
+            "name": "surgery"
+        },
+        {
+            "name": "optical"
+        },
+        {
+            "name": "oxidants"
+        },
+        {
+            "name": "pods"
+        },
+        {
             "name": "prison"
         },
         {
-            "name": "sec"
+            "name": "psychology"
+        },
+        {
+            "name": "radiation"
+        },
+        {
+            "name": "reception"
+        },
+        {
+            "name": "rnd"
+        },
+        {
+            "name": "robo"
+        },
+        {
+            "name": "salvage"
+        },
+        {
+            "name": "sci"
+        },
+        {
+            "name": "secure"
+        },
+        {
+            "name": "securearea"
+        },
+        {
+            "name": "cans"
+        },
+        {
+            "name": "cans_sci"
+        },
+        {
+            "name": "shock"
+        },
+        {
+            "name": "something-old1"
+        },
+        {
+            "name": "something-old2"
+        },
+        {
+            "name": "space"
+        },
+        {
+            "name": "telecoms"
+        },
+        {
+            "name": "toxins"
+        },
+        {
+            "name": "virology"
+        },
+        {
+            "name": "xenobio"
+        },
+        {
+            "name": "zomlab"
+        },
+        {
+            "name": "vox"
+        },
+        {
+            "name": "small_secure_red"
+        },
+        {
+            "name": "small_secure"
+        },
+        {
+            "name": "medium_secure_red"
+        },
+        {
+            "name": "medium_blank"
+        },
+        {
+            "name": "medium_magnetics"
+        },
+        {
+            "name": "medium_danger"
+        },
+        {
+            "name": "medium_explosives"
+        },
+        {
+            "name": "medium_cryogenics"
+        },
+        {
+            "name": "medium_electrical"
+        },
+        {
+            "name": "medium_biohazard"
+        },
+        {
+            "name": "medium_radiation"
+        },
+        {
+            "name": "medium_flammable"
+        },
+        {
+            "name": "medium_laser"
+        },
+        {
+            "name": "medium_secure"
+        },
+        {
+            "name": "goldenplaque"
+        },
+        {
+            "name": "kiddieplaque"
         },
         {
             "name": "security"
+        },
+        {
+            "name": "data"
+        },
+        {
+            "name": "cryo"
+        },
+        {
+            "name": "nanotrasen_sign1"
+        },
+        {
+            "name": "nanotrasen_sign2"
+        },
+        {
+            "name": "nanotrasen_sign3"
+        },
+        {
+            "name": "nanotrasen_sign4"
+        },
+        {
+            "name": "nanotrasen_sign5"
+        },
+        {
+            "name": "one"
+        },
+        {
+            "name": "two"
+        },
+        {
+            "name": "three"
+        },
+        {
+            "name": "four"
+        },
+        {
+            "name": "five"
+        },
+        {
+            "name": "six"
+        },
+        {
+            "name": "seven"
+        },
+        {
+            "name": "eight"
+        },
+        {
+            "name": "nine"
+        },
+        {
+            "name": "zero"
+        },
+        {
+            "name": "survival"
+        },
+        {
+            "name": "ntmining"
         }
     ]
 }
