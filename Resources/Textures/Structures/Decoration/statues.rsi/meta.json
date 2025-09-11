@@ -1,87 +1,20 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "leonardo_dabepis (232229415176634368) on Discord for the Oracle and Sophie, @Vordenburg for the liquid",
-    "size": {
-        "x": 32,
-        "y": 64
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "https://github.com/tgstation/tgstation/commit/2bb568bf2beddeee5f1f28cbc1e15bdcfb2e2cb0, bananium_clown made by brainfood1183 (github) for ss14",
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "bananium_clown"
     },
-    "states": [
-        {
-            "name": "sophie"
-        },
-        {
-            "name": "oracle-0"
-        },
-        {
-            "name": "oracle-1"
-        },
-        {
-            "name": "oracle-2"
-        },
-        {
-            "name": "oracle-3"
-        },
-        {
-            "name": "oracle-4"
-        },
-        {
-            "name": "oracle-5"
-        },
-        {
-            "name": "oracle-6",
-            "delays": [
-                [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
-                ]
-            ]
-        },
-        {
-            "name": "oracle-7",
-            "delays": [
-                [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
-                ]
-            ]
-        },
-        {
-            "name": "oracle-8",
-            "delays": [
-                [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
-                ]
-            ]
-        },
-        {
-            "name": "oracle-9",
-            "delays": [
-                [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
-                ]
-            ]
-        },
-        {
-            "name": "oracle-10",
-            "delays": [
-                [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
-                ]
-            ]
-        }
-    ]
+    {
+      "name": "venus_blue"
+    },
+    {
+      "name": "venus_red"
+    }
+  ]
 }
