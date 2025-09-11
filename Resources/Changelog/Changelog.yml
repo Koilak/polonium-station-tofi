@@ -1,11 +1,4 @@
 ﻿Entries:
-- author: IProduceWidgets
-  changes:
-  - message: Holobarrier projectors are now more power efficient.
-    type: Tweak
-  id: 8231
-  time: '2025-04-18T16:10:12.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/34473
 - author: K-Dynamic
   changes:
   - message: Removed egg-plant from MegaSeed Servitor. (Egg-plant seeds can still
@@ -3885,5 +3878,12 @@
   - message: "Dodano system nowego \u017Cycia ze Starlight'a."
     type: Add
   id: 8742
+  time: '2025-09-11T10:58:46.0000000+00:00'
+  url: https://github.com/polonium14/polonium-station/pull/61
+- author: elperson
+  changes:
+  - message: "Dodano system nowego \u017Cycia ze Starlight'a."
+    type: Add
+  id: 8743
   time: '2025-09-11T10:58:46.0000000+00:00'
   url: https://github.com/polonium14/polonium-station/pull/61
