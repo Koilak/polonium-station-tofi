@@ -27,7 +27,7 @@
     - type: MagazineVisuals
       magState: mag
       steps: 2
-      zeroVisible: true
+      zeroVisible: false
     - type: Appearance
 
 - type: entity
