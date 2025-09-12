@@ -1,4 +1,6 @@
 - type: entity
+
+  # Muszę zrobić poprawny prototyp do tłumaczenia kiedyś
   id: VisMPSPistolMagazineBase
   name: Magazynek VIS MPS (.35 auto any)
   parent: [ BaseItem, BaseSecurityContraband]
@@ -30,6 +32,8 @@
       zeroVisible: false
     - type: Appearance
 
+
+# Pierdyłiard wersji tego magazyneku
 
 - type: entity
   id: VisMPSPistolMagazine

@@ -25,6 +25,8 @@
       shotsPerBurst: 3
       minAngle: 24
       maxAngle: 36
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
       availableModes:
         - FullAuto
         - Burst

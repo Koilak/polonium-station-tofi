@@ -11,6 +11,7 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  # broni dostępne tryby: tylko samoczynny
   - type: Gun
     fireRate: 6
     availableModes:
@@ -24,6 +25,7 @@
       whitelist:
         tags:
           - CartridgePistol
+  # sloty: magazynek i komora
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -43,13 +45,18 @@
         whitelist:
           tags:
             - CartridgePistol
+  # kontenery slotów: magazynek i komora
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  # licznik amunicji
   - type: AmmoCounter
+  # wizualizacja magazynku
   - type: MagazineVisuals
     magState: mag
     steps: 1
     zeroVisible: true
+  # wygląd
   - type: Appearance
+
