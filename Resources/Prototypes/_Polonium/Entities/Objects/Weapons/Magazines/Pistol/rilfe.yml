@@ -37,5 +37,5 @@
   name: Magazynek Alexis-BOR (.30 any)
   parent: BorSniperMagazineBase
   components:
-    - BallisticAmmoProvider:
+    - type: BallisticAmmoProvider
       proto: CartridgeLightRifle
