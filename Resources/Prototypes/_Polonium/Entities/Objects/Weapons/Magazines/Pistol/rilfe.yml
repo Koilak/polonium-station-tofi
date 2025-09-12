@@ -2,7 +2,7 @@
 
   # Muszę zrobić poprawny prototyp do tłumaczenia kiedyś
   id: BorSniperMagazineBase
-  name: Magazynek Alexis-BOR (.30 any)
+  name: Magazynek Alexis-BOR (.30 rifle any)
   parent: [ BaseItem, BaseSecurityContraband]
   components:
     - type: Tag
@@ -28,13 +28,13 @@
         map: ["enum.GunVisualLayers.Mag"]
     - type: MagazineVisuals
       magState: mag
-      steps: 1
+      steps: 2
       zeroVisible: false
     - type: Appearance
 
 - type: entity
   id: BorSniperMagazine
-  name: Magazynek Alexis-BOR (.30 any)
+  name: Magazynek Alexis-BOR (.30 rifle )
   parent: BorSniperMagazineBase
   components:
     - type: BallisticAmmoProvider

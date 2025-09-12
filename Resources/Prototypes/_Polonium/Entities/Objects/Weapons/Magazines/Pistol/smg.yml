@@ -26,8 +26,8 @@
         map: ["enum.GunVisualLayers.Mag"]
     - type: MagazineVisuals
       magState: mag
-      steps: 1
-      zeroVisible: false
+      steps: 2
+      zeroVisible: true
     - type: Appearance
 
 - type: entity
