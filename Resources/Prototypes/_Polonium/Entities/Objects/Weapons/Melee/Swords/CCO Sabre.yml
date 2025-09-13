@@ -2,7 +2,7 @@
 
 - type: entity
   name: Miecz Oficera Operacyjnego
-  parent: [ BaseSword, BaseCentCommContraband ]
+  parent: [ BaseSword, BaseCentcommContraband ]
   id: CCOSabre
   description: Ceremonilany ale i praktyczny miecz należący do Oficera Operacyjnego. Wygląda na ostry.
   components:
@@ -35,7 +35,7 @@
 # Futerał na miecz CCO
 
 - type: entity
-  parent: [ClothingBeltBase, ClothingSlotBase, BaseCentCommContraband]
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseCentcommContraband]
   id: ClothingBeltSheathCCO
   name: Futerał na miecz Oficera Operacyjnego
   description: Czujesz się bezpieczniej kiedy w środku jest miecz.
