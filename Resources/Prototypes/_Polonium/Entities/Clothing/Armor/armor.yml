@@ -11,7 +11,7 @@
   - type: ZombificationResistance
     zommbificationResistanceCoofficient: 0
   - type: FireProtection
-    Reduction: 0.9
+    reduction: 0.9
   - type: Armor
     modifiers:
       coefficients:
