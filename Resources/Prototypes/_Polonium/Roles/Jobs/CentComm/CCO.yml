@@ -1,0 +1,32 @@
+- type: job
+  id: CentralCommandCCO
+  name: job-name-centcomCCO
+  description: job-description-centcomCCO
+  playTimeTracker: JobCentralCommandOfficial
+  setPreference: false
+  startingGear: CCOGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-none
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, RadioImplantCentcomm, DeathAcidifierImplant]
+
+- type: startingGear
+  id: CCOGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorCCOArmor
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: WeaponPistolN1984
+    pocket1: Hypospray
+    pocket2: BoxFolderCentComClipboard
